@@ -4,7 +4,7 @@ class Physic
 {
 private:
 	static Physic* sInstance;
-	Physic();
+	Physic();	
 	~Physic();
 public:
 	static Physic* getInstance();

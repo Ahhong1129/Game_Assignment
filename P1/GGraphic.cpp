@@ -53,7 +53,7 @@ GGraphic::~GGraphic()
 }
 void GGraphic::begin() {
 	//	Clear the back buffer.
-	d3dDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(255, 255, 255), 1.0f, 0);
+	d3dDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(0, 0, 0), 1.0f, 0);
 	//	Begin the scene
 	d3dDevice->BeginScene();
 }

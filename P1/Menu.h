@@ -3,7 +3,6 @@
 #include "GGraphic.h"
 #include<d3d9.h>
 #include<d3dx9.h>
-#include<fmod.hpp>
 class Menu : public GameState
 {
 	LPD3DXSPRITE spriteMenu;
@@ -12,8 +11,6 @@ class Menu : public GameState
 	LPD3DXFONT menu_font;
 	D3DXVECTOR3 menuPosition;
 	RECT menuRect;
-	FMOD::System* system;
-	FMOD::Sound* sound;
 public:
 	Menu();
 	~Menu();
