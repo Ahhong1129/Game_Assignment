@@ -91,7 +91,7 @@ void Level1::init()
 	rock_position[4].x = 100;
 	rock_position[4].y = -3000;
 
-	rock_position[5].x = 120;
+	rock_position[5].x = 230;
 	rock_position[5].y = -5000;
 
 	rock_position[6].x = 100;
@@ -106,10 +106,10 @@ void Level1::init()
 	rock_position[9].x = 100;
 	rock_position[9].y = -15000;
 
-	rock_position[10].x = 100;
+	rock_position[10].x = 230;
 	rock_position[10].y = -900;
 
-	rock_position[11].x = 120;
+	rock_position[11].x = 200;
 	rock_position[11].y = -700;
 
 	/*rock_position.x = 100;
@@ -151,7 +151,7 @@ void Level1::init()
 	block_position[8].y = -2000;
 
 	block_position[9].x = 230;
-	block_position[9].y = -5000;
+	block_position[9].y = -12000;
 
 	block_position[10].x = 230;
 	block_position[10].y = -20000;
@@ -199,13 +199,13 @@ void Level1::init()
 	background_position[1].y = -1024 + 600 - 1024;
 
 	isMainCarMoving = false;
-	speed = (1.0f / animationRate) * 200;
+	speed = (1.0f / animationRate) * 85;
 	direction.x = 0;
 	direction.y = 1;
 
 	bgLength = 30000;
 	start = false;
-	countDownTimer = 20;
+	countDownTimer = 50;
 
 }
 
@@ -252,8 +252,9 @@ void Level1::fixedUpdate()
 			D3DXVECTOR2 velocity = direction * (speed / 60.0f);
 			mainCar_position -= velocity;
 			velocity = -velocity;
-			start = true;
 			startParticleSystem();
+			rock_position[i].y -= 10000;
+			start = true;
 		}
 	}
 
